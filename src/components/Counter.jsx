@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { increment } from "../features/counter/counterSlice";
+import { decrement, increment } from "../features/counter/counterSlice";
 
 function Counter() {
   const count = useSelector((state) => state.counter.value);
@@ -17,10 +17,11 @@ function Counter() {
               {count}
             </p>
           </div>
-          <div className="flex items-center justify-center mt-10">
+          <div className="flex items-center justify-center mt-10 gap-1">
             <button onClick={()=>dispatch(increment())} className="bg-yellow-200 hover:bg-amber-300 px-4 py-1 rounded-2xl">
               Increment
             </button>
+            <button onClick={()=>dispatch(decrement())} className="bg-yellow-200 hover:bg-amber-300 px-4 py-1 rounded-2xl ">Decrement</button>
           </div>
         </div>
       </div>
