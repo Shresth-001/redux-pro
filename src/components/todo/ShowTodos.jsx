@@ -1,6 +1,7 @@
 import React from "react";
 import Todo from "./Todo";
 import { useSelector } from "react-redux";
+import Input from "../input/Input";
 
 const ShowTodos = () => {
     const todos=useSelector((state)=>state.todo.todos);
@@ -10,15 +11,18 @@ const ShowTodos = () => {
       {todos.length > 0 && (
         <>
           {todos.map((item) => (
-            <div key={item.id} className="flex items-center justify-start mt-1">
-              <div>
-                <label key={item.id}>
-                  <input  type="radio" key={item.id} checked={item.done} />
+            <div>
+            <div key={item.id} className="flex items-center justify-start mt-1 ">
+              <div className=" ">
+                <label >
+                  {/* <input  type="radio"  checked={item.done} /> */}
+                  <Input type={"radio"} checked={item.done} className="w-8 h-6 mb-3"/>
                 </label>
               </div>
-              <div className="border-r-2 border-gray-300 mx-4 self-stretch sm:block hidden">
-                <Todo key={item.id} todo={item} />
+              <div className="mx-4  sm:block hidden">
+                <Todo  todo={item} />
               </div>
+            </div>
             </div>
           ))}
         </>
