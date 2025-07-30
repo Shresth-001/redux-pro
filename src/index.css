@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+.app-background-gradient {
+  background: radial-gradient(at 0% 100%, #1e293b 0%, #020617 70%);
+  min-height: 100vh; 
+  width: 100%;       
+}
+
+
+.complex-custom-background {
+  min-height: 100vh; 
+  width: 100%;       
+  overflow: hidden;  
+
+  background:
+    
+    radial-gradient(circle at 100% 0%, #090631 0%, transparent 30%),
+
+    
+    radial-gradient(circle at 0% 100%, #171226 0%, transparent 30%),
+
+
+    radial-gradient(circle at center, #2C221A 0%, transparent 50%),
+
+    linear-gradient(to top, #4E3E03, #3F310E);
+}
+
+
+
+.complex-multi-point-background {
+   
+  width: 100%;       
+  overflow: hidden;  
+
+  
+  background:
+    
+    radial-gradient(circle at center, #2C221A 0%, transparent 60%),
+
+    radial-gradient(circle at 100% 0%, #090631 0%, transparent 60%),
+
+    radial-gradient(circle at 0% 100%, #4E3E03 0%, transparent 40%),
+
+    linear-gradient(to top, #4E3E03, #090631),
+
+  
+    #171226;
+}
+@theme{
+  --color-cus-blue: #090631;
+}
