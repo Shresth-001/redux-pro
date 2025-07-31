@@ -9,6 +9,7 @@ import { Button } from "../button/Button";
 function TodoApp() {
   const [newText, setNewText] = useState("");
 
+
   // console.log(todos);
   const dispatch = useDispatch();
   const handleChange = (event) => {
@@ -34,7 +35,7 @@ function TodoApp() {
               value={newText}
               placeholder={"Enter your Task"}
             />
-             <Button onClick={handleAdd} className={" mt-4 px-10 py-2 rounded-2xl mt-5bg bg-red-300"} text={"ADD"}/>
+             <Button onClick={handleAdd} className={" mt-4 px-10 py-2 rounded-2xl  bg bg-red-300"} text={"ADD"}/>
           </div>
           <div className="flex flex-col no-scrollbar mt-2">
             <ShowTodos />
